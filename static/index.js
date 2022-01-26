@@ -21,6 +21,11 @@
         GameTimeLayer;
     let transform, transitionDuration, welcomeLayerClosed;
 
+    function getGameTime() {
+        const $right = document.querySelector('input[name="birthday"]:checked')
+        return $right && $right.value === '0222' ? 25 : 20
+    }
+
     w.init = function() {
         showWelcomeLayer();
         body = document.getElementById('gameBody') || document.body;
@@ -45,6 +50,8 @@
         let btn = document.getElementById('ready-btn');
         btn.className = 'btn btn-primary btn-lg';
         btn.onclick = function () {
+            _gameTimeNum = getGameTime();
+            GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
             closeWelcomeLayer();
         }
     }
@@ -127,7 +134,7 @@
         _gameScore = 0;
         _gameOver = false;
         _gameStart = false;
-        _gameTimeNum = 20;
+        _gameTimeNum = getGameTime();
         GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
         countBlockSize();
         refreshGameLayer(GameLayer[0]);
