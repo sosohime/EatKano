@@ -139,14 +139,19 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
-
+.bogood{
+    background-size: auto 100%;
+    background-image: url(./image/goodke.png);  
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .t1,
 .t2,
 .t3,
 .t4,
 .t5 {
     background-size: auto 100%;
-    background-image: url(./image/ClickBefore.png);
+    background-image: url(./image/ClickBefore.gif);
 }
 
 .tt1,

@@ -350,11 +350,11 @@
             return '倒计时多了' + ((deviation_time / 1000) - 20).toFixed(2) + "s";
         }
         SubmitResults();
-        if (score <= 49) return '试着好好练一下？';
-        if (score <= 99) return 'TCL';
-        if (score <= 149) return 'TQL';
-        if (score <= 199) return '您';
-        return '人？';
+        if (score <= 50) return '博哥对你非常不满意';
+        if (score <= 80) return '博哥对你很不满意';
+        if (score <= 110) return '博哥觉得可以再加把劲';
+        if (score <= 140) return '博哥觉得你差不多了';
+        return '<div class="bogood" style="height: 160px;"></div>';
     }
 
     w.toStr = function(obj) {
